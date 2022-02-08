@@ -494,7 +494,11 @@ RCT_EXPORT_METHOD(scheduleAlarm: (NSDictionary *)details resolver:(RCTPromiseRes
             // set alarm date
             NSDateComponents *fireDate = parseDate(details[@"fire_date"]);
             
-            UNCalendarNotificationTrigger* trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:fireDate repeats:NO];
+            NSString *scheduleType = details[@"schedule_type"];
+            
+            BOOL shouldRepeat = ([scheduleType isEqualToString:@"repeat"]) ? YES : NO;
+            
+            UNCalendarNotificationTrigger* trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:fireDate repeats:shouldRepeat];
             
             // alarm id
             NSString *alarmId = [NSString stringWithFormat: @"%ld", (long) NSDate.date.timeIntervalSince1970];
