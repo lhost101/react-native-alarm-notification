@@ -54,12 +54,12 @@ static NSDateComponents *parseDate(NSString *dateString) {
     
     // Configure the trigger for date
     NSDateComponents *fireDate = [[NSDateComponents alloc] init];
-    fireDate.day = [strNumDay intValue];
-    fireDate.month = [strNumMonth intValue];
-    fireDate.year = [strNumYear intValue];
+//    fireDate.day = [strNumDay intValue];
+//    fireDate.month = [strNumMonth intValue];
+//    fireDate.year = [strNumYear intValue];
     fireDate.hour = [strNumHour intValue];
     fireDate.minute = [strNumMinute intValue];
-    fireDate.second = [strNumSecond intValue];
+//    fireDate.second = [strNumSecond intValue];
     fireDate.timeZone = [NSTimeZone defaultTimeZone];
     
     return fireDate;
