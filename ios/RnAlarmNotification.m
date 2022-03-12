@@ -60,7 +60,7 @@ static NSDateComponents *parseDate(NSString *dateString) {
     fireDate.hour = [strNumHour intValue];
     fireDate.minute = [strNumMinute intValue];
 //    fireDate.second = [strNumSecond intValue];
-    fireDate.timeZone = [NSTimeZone defaultTimeZone];
+    fireDate.timeZone = [NSTimeZone systemTimeZone];
     
     return fireDate;
 }
