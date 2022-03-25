@@ -59,7 +59,7 @@ static NSDateComponents *parseDate(NSString *dateString) {
 //    fireDate.year = [strNumYear intValue];
     fireDate.hour = [strNumHour intValue];
     fireDate.minute = [strNumMinute intValue];
-//    fireDate.second = [strNumSecond intValue];
+    fireDate.second = [strNumSecond intValue];
     fireDate.timeZone = [NSTimeZone systemTimeZone];
     
     return fireDate;
